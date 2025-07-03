@@ -1,0 +1,35 @@
+/* Basic pleasant styling with a soft color scheme */
+body {
+  font-family: sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+}
+
+main {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #2a7ae2;
+}
+
+button {
+  background-color: #2a7ae2;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1a5ec8;
+}
