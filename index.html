@@ -20,15 +20,15 @@
 
         <div id="step1">
         <div>
-                <label for="schedule-url"><strong>Copy the URL of your schedule page and paste it here.</strong></label>
+                <label for="schedule-url"><strong>Copy the URL of your schedule page and paste it here, then click "Get schedule data" below..</strong></label>
                 <small>(looks like this: <code>www.gencon.com/schedules/123456?c=indy2025</code>)</small>
         <br>
         <small>Make sure you're logged into Gen Con website so that the JSON data for your schedule can load in a new tab.</small>
         <input type="text" id="schedule-url"></input>
-	<small><strong>Copy all the text that displays in the new tab and return to this page.</strong></small>
 	<br>
         </div>
         <div>
+	    <small><strong>Copy all the text that displays in the new tab and return to this page.</strong></small>
             <button onclick="setMessage('');getSched();">Get schedule data</button>
         </div>
         </div>
