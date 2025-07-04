@@ -10,22 +10,23 @@
 </head>
 
 <body>
-    <header class="container" style="transform: scale(0.95); transform-origin: 0 0; width: 600px;">
-        <h1>Gen Con Schedule Exporter</h1>
+    <header class="container" >
+        <h2>Gen Con Schedule Exporter</h2>
         <small>Simple tool to help you grab your gencon schedule as JSON data (loads it in a tab), which you can paste back into this tool for export as an iCal (.ics) file for your convenience.
         <br>
         Follow the steps below to safely access your schedule data.
         </header>
-        <main class="container"  style="transform: scale(0.95); transform-origin: 0 0; width: 600px;">
+        <main class="container"  >
 
         <div id="step1">
         <div>
                 <label for="schedule-url"><strong>Copy the URL of your schedule page and paste it here.</strong></label>
                 <small>(looks like this: <code>www.gencon.com/schedules/123456?c=indy2025</code>)</small>
         <br>
-        <small>Make sure you're logged into Gen Con website so that the page can load - you will be redirected to your own data to copy and paste next.)</small>
+        <small>Make sure you're logged into Gen Con website so that the JSON data for your schedule can load in a new tab.</small>
         <input type="text" id="schedule-url"></input>
-        <small> A new tab will open that should display the JSON data of your schedule. Copy everything that displays in the new tab and return to this page.</small>
+	<small><strong>Copy all the text that displays in the new tab and return to this page.</strong></small>
+	<br>
         </div>
         <div>
             <button onclick="setMessage('');getSched();">Get schedule data</button>
@@ -52,7 +53,7 @@
         <div>
             <h4 id="msg"></h2></div>
         </main>
-        <footer class="container"  style="transform: scale(0.95); transform-origin: 0 0; width: 600px;">
+        <footer class="container"  >
         <div>
                 <small>Your data is safe - this page works completely in your local browser, no information is transferred to the host of this page or stored on any server.</small>
                 <small>Caveat: this page is created as a convenience / toy. No guarantees are made on accuracy or behavior. Check your schedules for accuracy. Pull requests welcome.</small>

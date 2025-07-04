@@ -2,3 +2,12 @@
 .hidden {
 	display: none;
 }
+
+button {
+	transform-origin: 0 0;
+	transform: scale(0.75)
+}
+
+.container {
+	width: 90%;
+}
