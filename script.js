@@ -110,6 +110,15 @@ function getSched() {
 
 }
 
+
+function injectIndianapolisTZ(icsText) {
+    //ical.js doesnt do TZ stuff out of the box, but simple to solve for gen con.
+    // just injecting the TZ into the local timestamps in the events
+    icsText = icsText.replace(/DTSTART:/ig, "DTSTART;TZID=America/Indiana/Indianapolis:"); 
+    icsText = icsText.replace(/DTEND:/ig, "DTEND;TZID=America/Indiana/Indianapolis:"); 
+    return icsText;
+}
+
 function process() {
     let txt = document.getElementById('txt').value;
     let obj;
@@ -152,8 +161,8 @@ function process() {
         comp.addSubcomponent(vevent);
     }
 
-    const icsText = comp.toString();
-    console.log(icsText);
+    let icsText = comp.toString();
+    icsText = injectIndianapolisTZ(icsText); 
     const blob = new Blob([icsText], {
         type: 'text/calendar'
     });
