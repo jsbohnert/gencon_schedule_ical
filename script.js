@@ -144,6 +144,9 @@ function process() {
     comp.updatePropertyWithValue('prodid', '-//Gen Con Schedule Exporter//EN');
     comp.updatePropertyWithValue('version', '0.1');
 
+    if (obj["has_more"]) {
+        setMessage("You have more events in your schedule than this tool can currently handle - your calendar will be missing some items - submit a bug!");
+    }
     let eDataArr = obj["data"];
 
     for (let i = 0; i < eDataArr.length; i++) {
