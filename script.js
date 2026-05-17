@@ -103,7 +103,7 @@ function getSched() {
     }
     let reRes = re.exec(sched_url);
     const currentYear = new Date().getFullYear();
-    let newUrl = `https://www.gencon.com/api/v2/schedule?c=indy${currentYear}&contact_id=${reRes[1]}`
+    let newUrl = `https://www.gencon.com/api/v2/schedule?contact_id=${reRes[1]}&page=1&page_size=500`
     window.open(newUrl, "_blank");
     hideStep1();
     showStep2();
