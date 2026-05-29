@@ -16,6 +16,10 @@ button {
 	margin-left: 2em;
 }
 
+.warning {
+	color: #EE402E; 
+}
+
 .tabs {
       display: flex;
       gap: 0.5rem;
