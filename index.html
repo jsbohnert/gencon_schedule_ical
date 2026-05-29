@@ -26,15 +26,21 @@
         <small>Step 3</small>
       </div>
     </div>
+    <hr>
     <div id="step1" class="tab-content active">
       <div>
-        <small><label for="schedule-url"><strong>Copy the URL of your schedule page and paste it here, then click "Get schedule data" below..</strong></label> <small>(looks like this: <code>https://www.gencon.com/schedules/123456</code>)</small><br>
-        <small>Make sure you're logged into Gen Con website so that the JSON data for your schedule can load in a new tab.</small> <input type="text" id="schedule-url"></small><br>
+	      <small>
+		<label for="schedule-url"><strong>Copy the URL of your schedule page and paste it here, then click "Get schedule data" below.</strong></label>
+		<small>(looks like this: <code>https://www.gencon.com/schedules/123456</code>, yours will have a unique number)</small></br>
+		<small>You may be asked to log in to your account on gencon.com - your password and other data is NOT seen by this tool, logging in will allow the schedule text to load for you to copy.</small>
+	      </smallin this browser >
+	<br><br><input type="text" id="schedule-url"></small><br>
       </div>
       <div>
         <div>
-          <small><strong>Copy all the text that displays in the new tab and return to this page.</strong></small>
-        </div><button onclick="setMessage('');getSched();">Get schedule data</button>
+          <small><strong>Click this button, then copy all the text that displays in the new tab and return to this page.</strong></small>
+	</div><button onclick="setMessage('');getSched();">Get schedule data</button><br>
+	<small><small>(This will open a tab to a computer-readable version of your Gen Con schedule on gencon.com. You can close the tab after copying its text content.)</small></small><br>
       </div>
     </div>
     <div id="step2" class="tab-content">
@@ -55,8 +61,11 @@
     </div>
   </main>
   <footer class="container">
+	  <hr>
     <div>
-      <small>Your data is safe - this page works completely in your local browser, no information is transferred to the host of this page or stored on any server.</small> <small>Caveat: this page is created as a convenience / toy. No guarantees are made on accuracy or behavior. Check your schedules for accuracy. <a href="https://github.com/jsbohnert/gencon_schedule_ical">Pull requests welcome.</a></small><br>
+      <small>Your data is safe - this page works completely in your local browser, no information is transferred to the host of this page or stored on any server.</small>
+      <br><small>Caveat: this page is created as a convenience / toy. No guarantees are made on accuracy or behavior. Check your schedules for accuracy. </small>
+      <br><small>Open source. <a href="https://github.com/jsbohnert/gencon_schedule_ical">Pull requests welcome.</a></small><br>
       <small>Projects used in this tool: ical.js, Pico CSS</small>
     </div>
   </footer>

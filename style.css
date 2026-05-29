@@ -12,6 +12,10 @@ button {
 	width: 90%;
 }
 
+.indent {
+	margin-left: 2em;
+}
+
 .tabs {
       display: flex;
       gap: 0.5rem;
