@@ -19,7 +19,21 @@
         </header>
         <main class="container"  >
 
-        <div id="step1">
+  <div class="tabs">
+    <div class="tab-button active" id="tab-step1">
+      Step 1 
+    </div>
+
+    <div class="tab-button" id="tab-step2">
+      Step 2 
+    </div>
+
+    <div class="tab-button" id="tab-step3">
+      Step 3 
+    </div>
+  </div>
+
+        <div id="step1" class="tab-content active">
         <div>
                 <label for="schedule-url"><strong>Copy the URL of your schedule page and paste it here, then click "Get schedule data" below..</strong></label>
                 <small>(looks like this: <code>https://www.gencon.com/schedules/123456</code>)</small>
@@ -34,7 +48,7 @@
         </div>
         </div>
 
-        <div id="step2" class="hidden">
+        <div id="step2" class="tab-content">
             <div>
                 <label for="txt"><strong>Paste schedule JSON content here</strong></label>
                 <textarea id="txt"></textarea>
@@ -42,11 +56,9 @@
             <div>
                 <button onclick="setMessage('');process();">Generate .ics</button>
             </div>
-
-
         </div>
 
-        <div id="step3" class="hidden">
+        <div id="step3" class="tab-content">
             <strong>Schedule generated.</strong>
             <br>
             <div id="dl-link"></div>

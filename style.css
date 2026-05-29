@@ -11,3 +11,37 @@ button {
 .container {
 	width: 90%;
 }
+
+.tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--muted-border-color);
+    }
+
+    .tab-button {
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem 0.5rem 0 0;
+      margin-bottom: -1px;
+      font-weight: 100;
+    }
+
+    .tab-button.active {
+      background: var(--card-background-color);
+      border: 1px solid var(--muted-border-color);
+      border-bottom: 1px solid var(--card-background-color);
+      font-weight: bold;
+    }
+
+    /* Tab content */
+    .tab-content {
+      display: none;
+      padding: 1rem;
+      border: 1px solid var(--muted-border-color);
+      border-radius: 0 0.5rem 0.5rem 0.5rem;
+      background: var(--card-background-color);
+    }
+
+    .tab-content.active {
+      display: block;
+    }
