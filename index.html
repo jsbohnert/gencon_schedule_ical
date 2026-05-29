@@ -1,81 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gen Con Schedule Exporter</title>
-    <link rel="stylesheet" href="pico.min.css">
-    <link rel="stylesheet" href="style.css">
-    <meta name="google-site-verification" content="pJNrX94Pv-dsVEq-UFcYPCJwMzvb7C9OTHnwP1GAF-A" />
+  <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.6.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gen Con Schedule Exporter</title>
+  <link rel="stylesheet" href="pico.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="google-site-verification" content="pJNrX94Pv-dsVEq-UFcYPCJwMzvb7C9OTHnwP1GAF-A">
 </head>
-
 <body>
-    <header class="container" >
-        <h2>Gen Con Schedule Exporter</h2>
-        <small>Simple tool to help you grab your gencon schedule as JSON data (loads it in a tab), which you can paste back into this tool for export as an iCal (.ics) file for your convenience.
-        <br>
-        Follow the steps below to safely access your schedule data.
-        </header>
-        <main class="container"  >
-
-  <div class="tabs">
-    <div class="tab-button active" id="tab-step1">
-      Step 1 
+  <header class="container">
+    <h2>Gen Con Schedule Exporter</h2><small>Simple tool to help you grab your gencon schedule as JSON data (loads it in a tab), which you can paste back into this tool for export as an iCal (.ics) file for your convenience.<br>
+    Follow the steps below to safely access your schedule data.</small>
+  </header>
+  <main class="container">
+    <div class="tabs">
+      <div class="tab-button active" id="tab-step1">
+        <small>Step 1</small>
+      </div>
+      <div class="tab-button" id="tab-step2">
+        <small>Step 2</small>
+      </div>
+      <div class="tab-button" id="tab-step3">
+        <small>Step 3</small>
+      </div>
     </div>
-
-    <div class="tab-button" id="tab-step2">
-      Step 2 
+    <div id="step1" class="tab-content active">
+      <div>
+        <small><label for="schedule-url"><strong>Copy the URL of your schedule page and paste it here, then click "Get schedule data" below..</strong></label> <small>(looks like this: <code>https://www.gencon.com/schedules/123456</code>)</small><br>
+        <small>Make sure you're logged into Gen Con website so that the JSON data for your schedule can load in a new tab.</small> <input type="text" id="schedule-url"></small><br>
+      </div>
+      <div>
+        <div>
+          <small><strong>Copy all the text that displays in the new tab and return to this page.</strong></small>
+        </div><button onclick="setMessage('');getSched();">Get schedule data</button>
+      </div>
     </div>
-
-    <div class="tab-button" id="tab-step3">
-      Step 3 
+    <div id="step2" class="tab-content">
+      <div>
+        <label for="txt"><strong>Paste schedule JSON content here</strong></label> 
+        <textarea id="txt"></textarea>
+      </div>
+      <div>
+        <button onclick="setMessage('');process();">Generate .ics</button>
+      </div>
     </div>
-  </div>
-
-        <div id="step1" class="tab-content active">
-        <div>
-                <label for="schedule-url"><strong>Copy the URL of your schedule page and paste it here, then click "Get schedule data" below..</strong></label>
-                <small>(looks like this: <code>https://www.gencon.com/schedules/123456</code>)</small>
-        <br>
-        <small>Make sure you're logged into Gen Con website so that the JSON data for your schedule can load in a new tab.</small>
-        <input type="text" id="schedule-url"></input>
-	<br>
-        </div>
-        <div>
-		<div><small><strong>Copy all the text that displays in the new tab and return to this page.</strong></small></div>
-            <button onclick="setMessage('');getSched();">Get schedule data</button>
-        </div>
-        </div>
-
-        <div id="step2" class="tab-content">
-            <div>
-                <label for="txt"><strong>Paste schedule JSON content here</strong></label>
-                <textarea id="txt"></textarea>
-            </div>
-            <div>
-                <button onclick="setMessage('');process();">Generate .ics</button>
-            </div>
-        </div>
-
-        <div id="step3" class="tab-content">
-            <strong>Schedule generated.</strong>
-            <br>
-            <div id="dl-link"></div>
-        </div>
-        <div>
-            <h4 id="msg"></h2></div>
-        </main>
-        <footer class="container"  >
-        <div>
-                <small>Your data is safe - this page works completely in your local browser, no information is transferred to the host of this page or stored on any server.</small>
-		<small>Caveat: this page is created as a convenience / toy. No guarantees are made on accuracy or behavior. Check your schedules for accuracy. <a href="https://github.com/jsbohnert/gencon_schedule_ical">Pull requests welcome.</a></small>
-                <br>
-                <small>Projects used in this tool: ical.js, Pico CSS</small>
-        </div>
-        </footer>
-
-  <script src="https://unpkg.com/ical.js/dist/ical.es5.min.cjs"></script>
+    <div id="step3" class="tab-content">
+      <strong>Schedule generated.</strong><br>
+      <div id="dl-link"></div>
+    </div>
+    <div>
+      <h4 id="msg"></h4>
+    </div>
+  </main>
+  <footer class="container">
+    <div>
+      <small>Your data is safe - this page works completely in your local browser, no information is transferred to the host of this page or stored on any server.</small> <small>Caveat: this page is created as a convenience / toy. No guarantees are made on accuracy or behavior. Check your schedules for accuracy. <a href="https://github.com/jsbohnert/gencon_schedule_ical">Pull requests welcome.</a></small><br>
+      <small>Projects used in this tool: ical.js, Pico CSS</small>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/ical.js/dist/ical.es5.min.cjs"></script> 
   <script src="script.js"></script>
 </body>
 </html>
